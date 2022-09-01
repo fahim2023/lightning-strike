@@ -1,56 +1,96 @@
-html {
-    background-color: #cbd7e7;
-    font-size: 62.5%;
-    box-sizing: border-box;
-    margin: 0;
+* {
+    margin:0;
     padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    --primary-color-Dark-cyan: hsl(158, 36%, 37%);
+    --background-color: hsl(30, 38%, 92%);
+    --font-color: hsl(228, 12%, 48%);
+    --dark-blue:hsl(212, 21%, 14%);
+    --White: hsl(0, 0%, 100%);
+    width: 100vw;
 
 }
 body {
-    display: flex;
     height: 100vh;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    font-family: 'Outfit', sans-serif;
-
-  
+    align-items: center;
+    background-color: var(--background-color);
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    height: 30vw;
     
 }
-.qr-container {
+img {
+    object-fit: cover;
+    width: 20vw;
+    height: 100%;
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+.content-card {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--White);
+    font-size: calc(.7rem + 0.4861vw);
+    font-family: "montserrat";
+    padding: 2.5rem;
+    color: var(--font-color);
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+.content-card { 
+    line-height: 1.5;
+}
+
+
+p:first-child {
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: var(--font-color);
+}
+.content-card h1 {
+    font-family: "faunces";
+    font-size: calc(1.6rem + 1.11vw);
+    color:  hsl(212, 21%, 14%);
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+}
+.button-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 18vw;
-    background-color: #fafafa;
-    padding: 2.5rem;
-    border-radius: 2rem;
-    
 }
-.image-container {
-    
-    width: 100%;
-
+button {
+    border: none;
+    outline: none;
+    color: var(--White);
+    background-color: var(--primary-color-Dark-cyan);
+    padding: 1.416vw 3.472vw;
+    border-radius: .5rem;
 }
-.image-container img {
-    width:100%;
-    border-radius: 1.25rem;
-    
+button:hover {
+    background-color: hsla(158, 36%, 37%, 0.822);
 }
-.qr-content {
-    padding: 1.2rem;
-    padding-bottom: 0;
+.price {
+    font-family: "faunces";
+    font-size: calc(1.5rem + 1.0416vw);
+    font-weight: 600;
+    color: var(--primary-color-Dark-cyan);
 }
-.qr-header {
-    text-align: center;
-    letter-spacing: .1rem;
-    font-size: 1.7rem;
-    line-height: 1.5;
-    
-}
-.qr-parag {
-    text-align: center;
-    font-size: 1.5rem;
-    color: rgb(134, 133, 133);
-    line-height: 1.4;
+span {
+    font-size: calc(.7rem + 0.4861vw);
+    color: var(--font-color);
+    vertical-align: middle;
+    text-decoration: line-through;
+    font-weight: 600;
+    display: inline-block;
+    padding-left: 1rem;
 }
